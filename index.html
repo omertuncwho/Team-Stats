@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="main.js"></script>
+  <title>Team Info</title>
+</head>
+<body>
+  <h1>Team Players</h1>
+  <ul id="players"></ul>
+
+  <h1>Team Games</h1>
+  <ul id="games"></ul>
+
+  <script>
+    const playersList = document.getElementById('players');
+    const gamesList = document.getElementById('games');
+
+    team.players.forEach(player => {
+      const li = document.createElement('li');
+      li.textContent = `${player.firstName} ${player.lastName}, ${player.age} years old`;
+      playersList.appendChild(li);
+    });
+    team.games.forEach(game => {
+      const li = document.createElement('li');
+      li.textContent = `Against ${game.opponent}: Our team ${game.teamPoints} - Opponent ${game.opponentPoints}`;
+      gamesList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
